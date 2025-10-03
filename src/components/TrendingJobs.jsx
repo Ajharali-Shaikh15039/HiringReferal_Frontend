@@ -28,6 +28,9 @@ const CATEGORIES = [
 export default function TrendingJobs() {
   return (
     <section className="tj-wrap">
+     <div className="container">
+<div className="row">
+  <div className="col-12">
       {/* ===== Background Decorations (pure CSS) ===== */}
       <div className="tj-decor">
         <div className="tj-left">
@@ -42,7 +45,8 @@ export default function TrendingJobs() {
 
       {/* ===== Content ===== */}
       <div className="tj-inner">
-        <header className="tj-head">
+       
+     <header className="tj-head">
           <div>
             <h2 className="tj-title">
               Trending Jobs <span className="tj-accent">Category</span>
@@ -82,7 +86,15 @@ export default function TrendingJobs() {
             </div>
           ))}
         </div>
+
+
+        </div>
+       
       </div>
+    </div>
+</div>
+
+
     </section>
   );
 }

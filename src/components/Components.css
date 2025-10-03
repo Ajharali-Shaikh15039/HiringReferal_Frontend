@@ -1,3 +1,5 @@
+
+
 /* ---------------- Root Variables ---------------- */
 :root {
   /* Primary Colors */
@@ -29,7 +31,7 @@ h6 {
   margin-bottom: 10px;
   font-weight: 600;
   color: var(--heading-color);
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 h1 {
@@ -64,13 +66,13 @@ p {
   margin-bottom: 15px;
   font-size: 1rem;
   color: var(--text-color);
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 a:hover {
@@ -145,6 +147,33 @@ section{
   border: 0px solid rgba(255, 255, 255, .05);
   overflow: hidden;
 }
+.hr-hero__frame .hr-hero__content button.hr-cta{background: #544CF9; background: linear-gradient(90deg,rgba(84, 76, 249, 1) 0%, rgba(111, 104, 255, 1) 100%);  font-size: 17px; font-weight: 400;min-width: 270px;}
+nav ul.navbar-nav {margin-left: 10%;}
+nav ul.navbar-nav li.nav-item a.active{color: #fff;}
+
+nav form ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+nav form ul li{
+  display: flex;
+  gap: 8px;
+  margin-right: 10px;
+    text-decoration: none;
+  
+}
+nav form ul li a{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+}
+nav form ul li a:hover{
+  text-decoration: none;
+}
 
 .hr-nav {
   max-width: var(--maxw);
@@ -163,7 +192,7 @@ section{
 .hr-links a {
   color: var(--ink-dim);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Jost', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 .hr-links a:hover { color: #fff; }
@@ -171,6 +200,7 @@ section{
 
 .hr-actions { display: flex; justify-content: flex-end; gap: 12px; }
 @media (max-width: 899px) { .hr-actions { display: none; } }
+
 
 .hr-btn {
   text-decoration: none;
@@ -204,10 +234,10 @@ section{
   line-height: 1.14;
   font-size: clamp(26px, 6vw, 58px);
   color: rgba(255, 255, 255, .9);
-
   max-width: 920px;
   width: min(92vw, 920px);
   min-height: clamp(72px, 16vw, 140px);
+  margin-bottom: 30px;
 
   display: flex;
   align-items: center;
@@ -221,7 +251,7 @@ section{
   margin: 10px auto 22px;
   max-width: 860px;
   color: rgba(255, 255, 255, .86);
-  font-size: clamp(13px, 1.6vw, 14px);
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -255,8 +285,9 @@ section{
   border-radius: 999px;
   background: rgba(255, 255, 255, .42);
   cursor: pointer;
+  padding: 5px;
 }
-.hr-dot.is-active { width: 32px; background: #fff; transition: width .25s ease; }
+.hr-dot.is-active { width: 25px; background: #FBBC05; transition: width .25s ease; }
 
 .hr-anim { animation: fadeSlide .10s ease both; }
 @keyframes fadeSlide {
@@ -287,12 +318,13 @@ section{
   text-align: left;
   position: relative;
   /* For arrow positioning */
+      margin: 50px auto;
 }
 
 .text-section h2 {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Jost';
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Jost", sans-serif;
 }
 
 .text-section .highlight {
@@ -301,17 +333,17 @@ section{
 
 .text-section p {
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 8px;
   margin-bottom: 30px;
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 .logo-slide {
   display: flex !important;
   justify-content: center;
   align-items: center;
-  height: 180px;
+  /* height: 100px; */
 }
 
 .carousel-logo {
@@ -428,7 +460,7 @@ section{
   position: relative;
   z-index: 2;
   /* above shapes */
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
 }
 
@@ -443,11 +475,11 @@ section{
 
 .tj-title {
   margin: 0 0 6px;
-  font-size: 34px;
-  font-weight: 800;
+  font-size: 35px;
+  font-weight: 700;
   color: var(--ink);
   line-height: 1.2;
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 .tj-accent {
@@ -456,8 +488,8 @@ section{
 
 .tj-sub {
   margin: 0;
-  color: var(--muted);
-  font-size: 14px;
+  color: #595959;
+  font-size: 16px;
 }
 
 .tj-explore {
@@ -467,7 +499,7 @@ section{
   text-decoration: none;
   color: var(--ink);
   font-weight: 600;
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 .tj-explore-circle {
@@ -589,10 +621,16 @@ section{
   align-items: center;
   gap: 14px;
   color: #9aa4b2;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 14px;
   letter-spacing: .5px;
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
+}
+.tj-num span {
+  font-size: 16px;
+  font-weight: 500;
+  /* color: #00A7AC; */
+  color: rgba(0, 167, 172, 0.2);
 }
 
 .tj-num i {
@@ -606,17 +644,18 @@ section{
 .tj-card-title {
   margin: 0 0 8px;
   font-size: 18px;
-  color: var(--ink);
+  color: #1E4D7D;
 }
 
 .tj-jobs {
   margin: 0;
   font-size: 14px;
-  color: var(--muted);
+  color: #707070;
 }
 
 .tj-jobs strong {
-  color: var(--ink);
+  color:#02111A;
+  font-weight: normal;
 }
 
 /* ===== Diagonal strips (BOTH SIDES) ===== */
@@ -841,11 +880,11 @@ section{
 
 .pe__title {
   margin: 0;
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 35px;
+  font-weight: 700;
   color: var(--slate-900);
   letter-spacing: -0.01em;
-  font-family: 'Jost';
+  font-family: "Jost", sans-serif;
 }
 
 .pe__title--accent {
@@ -854,22 +893,22 @@ section{
 
 .pe__subtitle {
   margin-top: 6px;
-  font-size: 12px;
-  color: var(--slate-500);
-  font-family: 'Jost';
+  font-size: 16px;
+  color: #595959;
+  font-family: "Jost", sans-serif;
 }
 
 /* ---------- Card ---------- */
 .pe__card {
-    position: relative;
+        position: relative;
     margin-top: 28px;
     border: 1px solid var(--border);
-    border-radius: 100px;
+    border-radius: 150px;
     background: var(--bg);
     box-shadow: 0 6px 24px rgba(2, 4, 69, 0.06);
     /* border: 2px solid #888888; */
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .pe__grid {
@@ -914,8 +953,8 @@ section{
     transform: translate(-50%, -50%) rotate(45deg);
     display: grid;
     place-items: center;
-    width: 44px;
-    height: 44px;
+    width: 70px;
+    height: 70px;
     border-radius: 10px;
     background: var(--violet-100);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -923,24 +962,24 @@ section{
   }
 
   .pe__or span {
-    transform: rotate(-45deg);
-    font-size: 10px;
-    font-weight: 800;
-    color: #6d28d9;
+         transform: rotate(-45deg);
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
   }
 }
 
 /* ---------- Choice blocks ---------- */
 .choice {
   position: relative;
-  padding: 32px 28px 44px;
+  padding: 60px 100px ;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   text-align: center;
 }
-
+.choice a{ position: absolute; bottom: -20px; text-decoration: none;}
 /* rounded outline “capsule” effect at the card ends on desktop */
 @media (min-width: 780px) {
 
@@ -978,35 +1017,38 @@ section{
 }
 
 .choice__title {
-  margin: 6px 0 0;
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--slate-800);
+ margin: 6px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1A3D6B;
 }
 
 .choice__text {
-  margin: 2px 0 0;
-  max-width: 360px;
-  font-size: 12px;
-  line-height: 1.65;
-  color: var(--slate-500);
+margin: 2px 0 0;
+    /* max-width: 360px; */
+    font-size: 16px;
+    line-height: 1.65;
+    color: #707070;
 }
 
 .choice__btn {
-  margin-top: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #334155;
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 9999px;
-  text-decoration: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  transition: background 0.2s ease;
+      margin-top: 12px;
+    display: inline-flex
+;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #02111A;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background 0.2s 
+ease;
+    text-decoration: none;
 }
 
 .choice__btn:hover {
@@ -1017,7 +1059,7 @@ section{
 @media (min-width: 780px) {
   /* card ke bahar nikla kuch bhi clip ho jaye */
   .pe__card { 
-    overflow: hidden; 
+    /* overflow: hidden;  */
   }
 
   /* jo capsule outlines bana rahe the un pseudo-elements ko band karo */
@@ -1131,9 +1173,9 @@ ease-in-out infinite;
 
 /* ---------------- HEAD ---------------- */
 .hiwc__head { text-align: center; }
-.hiwc__title { margin: 0; font-size: 28px; font-weight: 800; color: var(--slate-900); }
+.hiwc__title { margin: 0; font-size: 35px; font-weight: 700; color: var(--slate-900); }
 .hiwc__accent { color: var(--orange-500); }
-.hiwc__subtitle { margin-top: 6px; font-size: 12px; color: var(--slate-500); }
+.hiwc__subtitle { margin-top: 6px; font-size: 16px; color: #595959; }
 
 /* ---------------- GRID ---------------- */
 .hiwc__grid {
@@ -1167,6 +1209,19 @@ ease-in-out infinite;
 }
 .hiwc__stepTitle { margin: 0; font-size: 15px; font-weight: 800; color: var(--slate-800); }
 .hiwc__stepText { margin: 4px 0 0; font-size: 12px; color: var(--slate-500); line-height: 1.6; max-width: 210px; }
+
+
+.hiwcstep{position: relative; display: inline-block; width: 20%; margin-right: 0%; padding: 10px;}
+/* .hiwc__step ul{list-style: none; padding: 0; margin: 0;} */
+/* .hiwc__step ul li{margin-bottom: 10px; font-size: 14px; color: #595959; line-height: 1.6; max-width: 210px; } */
+.hiwcstep .hiwc{position: relative; padding: 0px; }
+.hiwcstep .hiwc h4{font-size: 21px; color: #000; font-weight: 500;}
+.hiwcstep .hiwc h4 span{ background-color: #ffffff; border: #CEE0DC solid 1px; border-radius: 50%; width: 50px; height: 50px; text-align: center; line-height: 45px; display: inline-block;}
+.hiwcstep .hiwc h4 span img{width: 23px; height: auto;}
+.hiwcstep .hiwc p{font-size: 16px; color: #595959; }
+
+
+
 
 /* ---------------- ANIMATIONS ---------------- */
 @keyframes dotFloat {
@@ -1276,21 +1331,22 @@ ease-in-out infinite;
 .ds__mock {
   position: absolute;
   left: clamp(24px, 7vw, 120px);
-  bottom: clamp(-24px, -2vw, -8px);
+  bottom: clamp(-29px, -2vw, -8px);
   z-index: 3; /* above circles */
 }
 
 .ds__phoneimg {
   display: block;
-  width: min(360px, 42vw);
+  /* width: min(360px, 42vw); */
+      width: auto;
   height: auto;
   filter: drop-shadow(0 18px 36px rgba(15, 15, 20, 0.25));
-  border-radius: 22px; /* in case image has transparent edges */
+  /* border-radius: 22px; */
 }
 
 /* Right side (copy) */
 .ds__copy {
-  text-align: left;
+  text-align: right;
   color: var(--ink);
 }
 
@@ -1302,7 +1358,7 @@ ease-in-out infinite;
 }
 
 .ds__title {
-  font-size: clamp(28px, 4.2vw, 52px);
+  font-size: 55px;
   line-height: 1.05;
   margin: 0 0 8px 0;
   font-weight: 800;
@@ -1310,24 +1366,31 @@ ease-in-out infinite;
 }
 
 .ds__headline {
-  font-size: clamp(20px, 2.4vw, 32px);
+  font-size: 45px;
   margin: 0 0 16px 0;
-  font-weight: 600;
+  font-weight: 500;
+  color: #000000;
 }
 
 .ds__note {
-  color: var(--muted);
+  color: #1A3D6B;
   line-height: 1.6;
   margin: 0 0 28px 0;
 }
 
 /* Badges */
-.ds__badges {
+/* .ds__badges {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
+} */
+
+.ds__badges{position: relative; margin: 20px 0;}
+.ds__badges a{margin-right: 20px; padding: 0px 30px; text-decoration: none; font-weight: normal; color: #1A3D6B;}
+.ds__badges a span{border-right: 1px solid rgba(136, 136, 136, .2); padding-right: 15px;font-size: 20px;}
+.ds__badges a span.apple{color: #EDCC30;}
+.ds__badges a span.android{color: #FF3366;}
 
 @media (max-width: 980px) {
   .ds__badges {

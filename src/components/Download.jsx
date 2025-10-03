@@ -6,6 +6,8 @@ export default function Download({ phoneSrc }) {
   return (
     <section className="lotus">
       <div className=" ds container">
+<div className="row">
+  <div className="col-md-12">
       <div className="ds__grid">
         {/* Left: background circles + phone */}
         <div className="ds__phone">
@@ -31,17 +33,19 @@ export default function Download({ phoneSrc }) {
 
           <div className="ds__badges">
             <a className="ds__badge" href="#" aria-label="App Store">
-              <span className="dot dot--yellow" />
-              <span>App Store</span>
+              <span className="apple"><i class="bi bi-apple"></i></span>
+               App Store
             </a>
             <a className="ds__badge" href="#" aria-label="Play Store">
-              <span className="dot dot--pink" />
-              <span>Play Store</span>
+              <span className="android" ><i class="bi bi-android2"></i> </span>
+              Play Store
             </a>
           </div>
         </div>
         </div>
       </div>
+        </div>
+</div>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Components.css';
 import logos from '../assets/footer-logo.png'; // adjust path as needed
+import mainLogo from "../images/main-logo.png";
 
 import "./Footer.css";
 
@@ -32,19 +33,7 @@ export default function Footer() {
           <div className="ft__brand">
             <div className="ft__logo">
               {/* Simple HR logo wordmark */}
-              <svg width="160" height="32" viewBox="0 0 320 64" fill="none" aria-hidden>
-                <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                    <stop stopColor="#ffffff" stopOpacity="1" />
-                    <stop offset="1" stopColor="#dbeafe" stopOpacity=".9" />
-                  </linearGradient>
-                </defs>
-                <path d="M24 50c10 0 18-8 18-18S34 14 24 14 6 22 6 32s8 18 18 18Z" fill="url(#g1)"/>
-                <circle cx="24" cy="20" r="5" fill="#fff"/>
-                <text x="48" y="42" fontFamily="ui-sans-serif, system-ui, Arial" fontSize="26" fontWeight="700" fill="#ffffff">
-                  HiringReferrals
-                </text>
-              </svg>
+              <img src={mainLogo} alt="HiringReferrals" />
             </div>
 
             <div className="ft__contact">

@@ -57,7 +57,7 @@
   position: absolute;
   inset: -6px;
   border-radius: 999px;
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, .85) inset;
+  box-shadow: 0 0 0 0px rgba(255, 255, 255, .85) inset;
 }
 
 .ft__input {
@@ -78,13 +78,13 @@
   border: 0;
   outline: 0;
   cursor: pointer;
-  background: #f2a700;
-  color: #111;
-  font-weight: 600;
+  background: #F9AB00;
+  color: #fff;
+  font-weight: 400;
   font-size: 16px;
-  padding: 12px 22px;
+  padding: 12px 40px;
   border-radius: 999px;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, .2) inset;
+  /* box-shadow: 0 2px 0 rgba(0, 0, 0, .2) inset; */
   transition: transform .06s ease, filter .15s ease;
 }
 
@@ -156,7 +156,7 @@
 .ft__h {
   margin: 6px 0 10px;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .ft__list {
@@ -170,6 +170,7 @@
 .ft__list a {
   color: var(--muted);
   text-decoration: none;
+      font-size: 14px;
 }
 
 .ft__list a:hover {

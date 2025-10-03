@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 /* ---------------- Reset & Global ---------------- */
@@ -19,7 +20,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Jost'
+  /* font-family: 'Jost' */
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 
 }
 /* Import the font files using relative paths */

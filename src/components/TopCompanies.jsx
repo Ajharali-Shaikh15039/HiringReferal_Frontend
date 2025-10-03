@@ -70,7 +70,9 @@ const TopCompanies = () => {
 
   return (
     <div className="container">
-    <div className="top-companies-carousel">
+<div className="row">
+  <div className="col-12">
+ <div className="top-companies-carousel">
       <div className="text-section">
         <h2 className="jost">
           Top Company <span className="highlight">Registered</span>
@@ -86,6 +88,10 @@ const TopCompanies = () => {
         ))}
       </Slider>
     </div>
+  </div>
+</div>
+
+   
     </div>
   );
 };
