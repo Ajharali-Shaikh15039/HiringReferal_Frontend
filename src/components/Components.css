@@ -1,5 +1,3 @@
-
-
 /* ---------------- Root Variables ---------------- */
 :root {
   /* Primary Colors */
@@ -18,9 +16,6 @@
 
 }
 
-
-
-
 /* ---------------- Typography ---------------- */
 h1,
 h2,
@@ -36,7 +31,7 @@ h6 {
 
 h1 {
   font-size: 2.5rem;
-   font-weight: 700;
+  font-weight: 700;
 }
 
 h2 {
@@ -46,7 +41,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
-   font-weight: 500;
+  font-weight: 500;
 }
 
 h4 {
@@ -107,17 +102,18 @@ button:hover {
   overflow: hidden;
 }
 
-section{
-  overflow: hidden;  
+section {
+  overflow: hidden;
   /* border: 5px solid red; */
   padding-top: 80px;
   padding-bottom: 80px;
 
- }
+}
 
 
 
 /* Header Styles */
+
 :root {
   --ink: #fff;
   --ink-dim: rgba(255, 255, 255, .9);
@@ -147,9 +143,22 @@ section{
   border: 0px solid rgba(255, 255, 255, .05);
   overflow: hidden;
 }
-.hr-hero__frame .hr-hero__content button.hr-cta{background: #544CF9; background: linear-gradient(90deg,rgba(84, 76, 249, 1) 0%, rgba(111, 104, 255, 1) 100%);  font-size: 17px; font-weight: 400;min-width: 270px;}
-nav ul.navbar-nav {margin-left: 10%;}
-nav ul.navbar-nav li.nav-item a.active{color: #fff;}
+
+.hr-hero__frame .hr-hero__content button.hr-cta {
+  background: #544CF9;
+  background: linear-gradient(90deg, rgba(84, 76, 249, 1) 0%, rgba(111, 104, 255, 1) 100%);
+  font-size: 17px;
+  font-weight: 400;
+  min-width: 270px;
+}
+
+nav ul.navbar-nav {
+  margin-left: 10%;
+}
+
+nav ul.navbar-nav li.nav-item a.active {
+  color: #fff;
+}
 
 nav form ul {
   list-style: none;
@@ -158,20 +167,22 @@ nav form ul {
   margin: 0;
   padding: 0;
 }
-nav form ul li{
+
+nav form ul li {
   display: flex;
   gap: 8px;
   margin-right: 10px;
-    text-decoration: none;
-  
+  text-decoration: none;
 }
-nav form ul li a{
+
+nav form ul li a {
   text-decoration: none;
   font-weight: 400;
   font-size: 15px;
   color: #fff;
 }
-nav form ul li a:hover{
+
+nav form ul li a:hover {
   text-decoration: none;
 }
 
@@ -185,22 +196,51 @@ nav form ul li a:hover{
   gap: 16px;
 }
 
-.hr-brand { display: flex; align-items: center; gap: 10px; }
-.hr-logo-mark { display: grid; place-items: center; }
+.hr-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-.hr-links { display: none; justify-content: center; gap: 26px; }
+.hr-logo-mark {
+  display: grid;
+  place-items: center;
+}
+
+.hr-links {
+  display: none;
+  justify-content: center;
+  gap: 26px;
+}
+
 .hr-links a {
   color: var(--ink-dim);
   text-decoration: none;
   font-size: 15px;
   font-family: 'Jost', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
-.hr-links a:hover { color: #fff; }
-@media (min-width: 900px) { .hr-links { display: flex; } }
 
-.hr-actions { display: flex; justify-content: flex-end; gap: 12px; }
-@media (max-width: 899px) { .hr-actions { display: none; } }
+.hr-links a:hover {
+  color: #fff;
+}
 
+@media (min-width: 900px) {
+  .hr-links {
+    display: flex;
+  }
+}
+
+.hr-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+@media (max-width: 899px) {
+  .hr-actions {
+    display: none;
+  }
+}
 
 .hr-btn {
   text-decoration: none;
@@ -209,12 +249,25 @@ nav form ul li a:hover{
   padding: 8px 16px;
   font-size: 14px;
   border: 1px solid transparent;
-  font-family: 'Jost', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Jost';
 }
-.hr-btn--ghost { border-color: rgba(255, 255, 255, .24); color: #fff; background: transparent; }
-.hr-btn--ghost:hover { background: rgba(255, 255, 255, .08); }
-.hr-btn--light { background: #fff; color: #2f2f44; }
-.hr-btn--light:hover { background: #f1f3ff; }
+
+.hr-btn--ghost {
+  border-color: rgba(255, 255, 255, .24);
+  color: #fff;
+  background: transparent;
+}
+
+.hr-btn--ghost:hover {
+  background: rgba(255, 255, 255, .08);
+}
+
+.hr-btn--light {
+  background: #fff;
+  color: #2f2f44 !important;
+}
+
+
 
 .hr-hero__content {
   max-width: var(--maxw);
@@ -266,7 +319,10 @@ nav form ul li a:hover{
   cursor: pointer;
   box-shadow: 0 10px 26px rgba(78, 97, 255, .35);
 }
-.hr-cta:hover { background: var(--primary-hover); }
+
+.hr-cta:hover {
+  background: var(--primary-hover);
+}
 
 .hr-dots {
   position: absolute;
@@ -278,6 +334,7 @@ nav form ul li a:hover{
   z-index: 10;
   pointer-events: auto;
 }
+
 .hr-dot {
   width: 5px;
   height: 5px;
@@ -287,19 +344,282 @@ nav form ul li a:hover{
   cursor: pointer;
   padding: 5px;
 }
-.hr-dot.is-active { width: 25px; background: #FBBC05; transition: width .25s ease; }
 
-.hr-anim { animation: fadeSlide .10s ease both; }
+.hr-dot.is-active {
+  width: 25px;
+  background: #FBBC05;
+  transition: width .25s ease;
+}
+
+.hr-anim {
+  animation: fadeSlide .10s ease both;
+}
+
 @keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 599px) {
-  .hr-title { font-size: clamp(26px, 8vw, 40px); }
-  .hr-cta { width: 100%; max-width: 280px; }
+  .hr-title {
+    font-size: clamp(26px, 8vw, 40px);
+  }
+
+  .hr-cta {
+    width: 100%;
+    max-width: 280px;
+  }
 }
 
+/* ========= Sticky-only-white header rules ========= */
+/* Default (NOT sticky): transparent bg + white text */
+nav.navbar {
+  background: transparent !important;
+  box-shadow: none;
+  transition: background .25s ease, color .25s ease, box-shadow .25s ease;
+}
+
+/* All links/text white before sticky */
+nav.navbar .nav-link,
+nav.navbar .navbar-brand,
+nav.navbar form ul li a {
+  color: #fff;
+}
+
+/* STICKY: fixed + white bg + black text */
+nav.navbar.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+  z-index: 1000;
+  height:85px;
+}
+
+.hr-btn--light:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Links black in sticky state */
+nav.navbar.is-sticky .nav-link,
+nav.navbar.is-sticky .navbar-brand,
+nav.navbar.is-sticky form ul li a {
+  color: #111 !important;
+}
+
+/* Active link black when sticky (override your earlier white) */
+nav.navbar.is-sticky ul.navbar-nav li.nav-item a.active {
+  color: #111 !important;
+}
+
+/* Toggler contrast (white at top, black when sticky) */
+nav.navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, .6);
+}
+
+nav.navbar.is-sticky .navbar-toggler {
+  border-color: rgba(0, 0, 0, .3);
+}
+
+nav.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+nav.navbar.is-sticky .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ================================================ */
+
+/* Logo size consistent rakho */
+.navbar .navbar-brand .hr-logo {
+  height: 38px;
+  /* 32–48px me jo suit kare wo rakh lo */
+  width: auto;
+  display: block;
+  /* inline-gap issues avoid */
+  transition: opacity .2s ease;
+  /* smooth feel */
+}
+
+
+/* =========================
+   MOBILE (≤575.98px)
+   ========================= */
+@media (max-width: 575.98px) {
+
+  /* Hero */
+  .hr-hero {
+    height: auto;
+    /* avoid fixed 740px on small screens */
+    min-height: 520px;
+    padding-bottom: 64px;
+  }
+
+  .hr-hero__frame {
+    border-radius: 18px;
+  }
+
+  .hr-hero__content {
+    padding: 28px 14px 56px;
+    /* tighter side padding */
+  }
+
+  /* Title & text */
+  .hr-title {
+    font-size: clamp(24px, 8.2vw, 34px);
+    line-height: 1.18;
+    min-height: 0;
+    /* remove fixed min-height box on small screens */
+    margin-bottom: 18px;
+  }
+
+  .hr-sub {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 8px auto 18px;
+    padding: 0 2px;
+  }
+
+  /* CTA */
+  .hr-cta {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  /* Dots: a bit easier to tap */
+  .hr-dots {
+    bottom: 8px;
+    gap: 10px;
+  }
+
+  .hr-dot {
+    width: 6px;
+    height: 6px;
+    padding: 6px;
+  }
+
+  /* Navbar spacing & logo */
+  nav ul.navbar-nav {
+    margin-left: 0 !important;
+  }
+
+  .navbar .navbar-brand .hr-logo {
+    height: 32px;
+  }
+
+  /* Right-side auth/actions compact */
+  nav form ul {
+    gap: 6px;
+  }
+
+  nav form ul li {
+    margin-right: 6px;
+  }
+
+  nav form ul li a {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL TABLETS (576–767.98px)
+   ========================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hr-hero {
+    height: auto;
+    min-height: 560px;
+    padding-bottom: 72px;
+  }
+
+  .hr-hero__content {
+    padding: 34px 18px 64px;
+  }
+
+  .hr-title {
+    font-size: clamp(26px, 6.2vw, 40px);
+    min-height: 0;
+    margin-bottom: 20px;
+  }
+
+  .hr-sub {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hr-cta {
+    max-width: 280px;
+  }
+
+  nav ul.navbar-nav {
+    margin-left: 0 !important;
+  }
+
+  .navbar .navbar-brand .hr-logo {
+    height: 34px;
+  }
+}
+
+/* =========================
+   TABLETS (768–991.98px)
+   ========================= */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hr-hero {
+    height: auto;
+    min-height: 640px;
+    padding-bottom: 80px;
+  }
+
+  .hr-hero__content {
+    padding: 42px 22px 72px;
+  }
+
+  .hr-title {
+    font-size: clamp(30px, 5vw, 46px);
+    min-height: 0;
+    margin-bottom: 22px;
+  }
+
+  .hr-sub {
+    font-size: 15.5px;
+    line-height: 1.7;
+    max-width: 780px;
+  }
+
+  .hr-cta {
+    min-width: 260px;
+  }
+
+  /* Navbar: soften left offset on medium screens */
+  nav ul.navbar-nav {
+    margin-left: 6% !important;
+  }
+
+  .navbar .navbar-brand .hr-logo {
+    height: 36px;
+  }
+}
+
+/* =========================
+   OPTIONAL: landscape phones
+   ========================= */
+@media (max-width: 899px) and (orientation: landscape) {
+  .hr-hero {
+    min-height: 480px;
+  }
+}
 
 /* End Header Styles */
 
@@ -318,7 +638,7 @@ nav form ul li a:hover{
   text-align: left;
   position: relative;
   /* For arrow positioning */
-      margin: 50px auto;
+  margin: 50px auto;
 }
 
 .text-section h2 {
@@ -389,7 +709,7 @@ nav form ul li a:hover{
 
 /* Put both arrows at the top-right, with a small gap */
 .next-arrow {
-  right: 18px!important;
+  right: 18px !important;
 }
 
 /* stays at the very right */
@@ -411,8 +731,149 @@ nav form ul li a:hover{
   .prev-arrow {
     right: 48px;
   }
+
 }
 
+
+/* =========================
+   PHONES (≤575.98px)
+   ========================= */
+@media (max-width: 575.98px) {
+  .top-companies-carousel {
+    margin: 28px auto;
+  }
+
+  .text-section h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .text-section p {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .logo-slide {
+    min-height: 72px;
+  }
+
+  .carousel-logo {
+    height: 56px;
+    /* smaller logos on phones */
+    width: 120px;
+    object-fit: contain;
+  }
+
+  /* arrows inside the header area (override desktop !important) */
+  .custom-arrow {
+    top: 6px !important;
+    right: 10px !important;
+    width: 28px;
+    height: 28px;
+  }
+
+  .prev-arrow {
+    right: 60px !important;
+  }
+
+
+  .slick-slide {
+    margin-top: 25px;
+  }
+
+
+
+}
+
+
+/* =========================
+   SMALL TABLETS (576–767.98px)
+   ========================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .top-companies-carousel {
+    margin: 36px auto;
+  }
+
+  .text-section h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .text-section p {
+    font-size: 15px;
+    margin-bottom: 22px;
+  }
+
+  .logo-slide {
+    min-height: 80px;
+  }
+
+  .carousel-logo {
+    height: 64px;
+    width: 135px;
+    object-fit: contain;
+  }
+
+  .custom-arrow {
+    top: 8px !important;
+    right: 12px !important;
+    width: 30px;
+    height: 30px;
+  }
+
+  .prev-arrow {
+    right: 52px !important;
+  }
+}
+
+/* =========================
+   TABLETS (768–991.98px)
+   ========================= */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .top-companies-carousel {
+    margin: 42px auto;
+  }
+
+  .text-section h2 {
+    font-size: 32px;
+  }
+
+  .text-section p {
+    font-size: 16px;
+  }
+
+  .logo-slide {
+    min-height: 88px;
+  }
+
+  .carousel-logo {
+    height: 72px;
+    width: 150px;
+    object-fit: contain;
+  }
+
+  /* keep arrows above title but closer than desktop */
+  .custom-arrow {
+    top: -60px !important;
+    /* desktop is -85px */
+    right: 16px !important;
+    width: 32px;
+    height: 32px;
+  }
+
+  .prev-arrow {
+    right: 64px !important;
+  }
+}
+
+/* (optional) landscape phones: tighten logo size a bit */
+@media (max-width: 899px) and (orientation: landscape) {
+  .carousel-logo {
+    height: 60px;
+    width: 130px;
+  }
+}
 
 /* End TopCompanies Styles */
 
@@ -435,7 +896,9 @@ nav form ul li a:hover{
   --vio-b: #bba7ff;
   --vvv: #f2f0fe;
 
-  /*--strip-angle: 60deg;   /* same slant as your design */
+/* --strip-angle: 60deg; */
+/* same slant as your design */
+
 }
 
 /* ===== Section base ===== */
@@ -519,30 +982,40 @@ nav form ul li a:hover{
 }
 
 
-.tj-explore .iconiv{
+.tj-explore .iconiv {
   transition: transform 0.3s ease;
 }
 
- .tj-explore.iconiv:hover {
-  transform: translateX(10px); /* Slide the icon 10px to the right */
+.tj-explore.iconiv:hover {
+  transform: translateX(10px);
+  /* Slide the icon 10px to the right */
 }
 
 
 
 /* .tj-icon ko center karna aur size set karna */
 .tj-icon {
-  display: flex; /* Flexbox use karenge */
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
-  width: 60px; /* Icon ka container width */
-  height: 60px; /* Icon ka container height */
-  margin-bottom: 15px; /* Thoda space niche */
+  display: flex;
+  /* Flexbox use karenge */
+  justify-content: center;
+  /* Horizontally center */
+  align-items: center;
+  /* Vertically center */
+  width: 60px;
+  /* Icon ka container width */
+  height: 60px;
+  /* Icon ka container height */
+  margin-bottom: 15px;
+  /* Thoda space niche */
 }
 
 .tj-icon img {
-  width: 40px; /* Icon ka size */
-  height: 40px; /* Icon ka size */
-  object-fit: contain; /* Maintain the aspect ratio of the icon */
+  width: 40px;
+  /* Icon ka size */
+  height: 40px;
+  /* Icon ka size */
+  object-fit: contain;
+  /* Maintain the aspect ratio of the icon */
 }
 
 
@@ -612,7 +1085,7 @@ nav form ul li a:hover{
 .tj-icon {
   width: 60px;
   height: 60px;
- 
+
 }
 
 /* number with faint horizontal rule */
@@ -626,6 +1099,7 @@ nav form ul li a:hover{
   letter-spacing: .5px;
   font-family: "Jost", sans-serif;
 }
+
 .tj-num span {
   font-size: 16px;
   font-weight: 500;
@@ -654,7 +1128,7 @@ nav form ul li a:hover{
 }
 
 .tj-jobs strong {
-  color:#02111A;
+  color: #02111A;
   font-weight: normal;
 }
 
@@ -796,6 +1270,68 @@ nav form ul li a:hover{
   }
 }
 
+/* =========================
+   TABLETS (≤991.98px)
+   ========================= */
+@media (max-width: 991.98px) {
+  /* decorative strips small screens par hide — overlap avoid */
+  .tj-left,
+  .tj-right { display: none; }
+
+  .tj-head { gap: 16px; margin-bottom: 22px; }
+  .tj-sub  { font-size: 15px; }
+  .tj-card { padding: 20px; }
+  .tj-icon { width: 52px; height: 52px; }
+  .tj-icon img { width: 36px; height: 36px; }
+  .tj-num { gap: 12px; font-size: 13px; }
+  .tj-num i { width: 32px; }
+}
+
+/* =========================
+   SMALL TABLETS (576–767.98px)
+   ========================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .tj-title { font-size: 30px; }
+  .tj-sub   { font-size: 15px; }
+  .tj-grid  { gap: 16px; }          /* a bit tighter spacing */
+  .tj-card  { padding: 18px; }
+  .tj-icon  { width: 48px; height: 48px; }
+  .tj-icon img { width: 32px; height: 32px; }
+  .tj-num i { width: 28px; }
+}
+
+/* =========================
+   PHONES (≤575.98px)
+   ========================= */
+@media (max-width: 575.98px) {
+  /* header stack + sizes */
+  .tj-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .tj-title { font-size: 26px; line-height: 1.2; }
+  .tj-sub   { font-size: 14px; }
+
+  /* grid: 2 cols already at ≤640; keep it. For very small phones, 1 col below */
+  .tj-grid { gap: 14px; }
+
+  /* card compaction */
+  .tj-card { padding: 16px; }
+  .tj-icon { width: 44px; height: 44px; margin-bottom: 10px; }
+  .tj-icon img { width: 28px; height: 28px; }
+  .tj-card-title { font-size: 16px; }
+  .tj-jobs { font-size: 13px; }
+
+  .tj-num { gap: 10px; font-size: 12px; }
+  .tj-num i { width: 24px; }
+
+  /* “Explore More” tap target */
+  .tj-explore { font-size: 14px; gap: 8px; }
+}
+
+/* =========================
+   VERY SMALL PHONES (≤420px)
+   ========================= */
+@media (max-width: 420px) {
+  .tj-grid { grid-template-columns: 1fr; } /* single column */
+}
 
 /* End TrendingJobs Styles */
 
@@ -900,15 +1436,15 @@ nav form ul li a:hover{
 
 /* ---------- Card ---------- */
 .pe__card {
-        position: relative;
-    margin-top: 28px;
-    border: 1px solid var(--border);
-    border-radius: 150px;
-    background: var(--bg);
-    box-shadow: 0 6px 24px rgba(2, 4, 69, 0.06);
-    /* border: 2px solid #888888; */
-    margin-left: 10%;
-    margin-right: 10%;
+  position: relative;
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: 150px;
+  background: var(--bg);
+  box-shadow: 0 6px 24px rgba(2, 4, 69, 0.06);
+  /* border: 2px solid #888888; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .pe__grid {
@@ -962,24 +1498,30 @@ nav form ul li a:hover{
   }
 
   .pe__or span {
-         transform: rotate(-45deg);
-        font-size: 20px;
-        font-weight: 500;
-        color: #000000;
+    transform: rotate(-45deg);
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
   }
 }
 
 /* ---------- Choice blocks ---------- */
 .choice {
   position: relative;
-  padding: 60px 100px ;
+  padding: 60px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   text-align: center;
 }
-.choice a{ position: absolute; bottom: -20px; text-decoration: none;}
+
+.choice a {
+  position: absolute;
+  bottom: -20px;
+  text-decoration: none;
+}
+
 /* rounded outline “capsule” effect at the card ends on desktop */
 @media (min-width: 780px) {
 
@@ -1017,38 +1559,36 @@ nav form ul li a:hover{
 }
 
 .choice__title {
- margin: 6px 0 0;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1A3D6B;
+  margin: 6px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A3D6B;
 }
 
 .choice__text {
-margin: 2px 0 0;
-    /* max-width: 360px; */
-    font-size: 16px;
-    line-height: 1.65;
-    color: #707070;
+  margin: 2px 0 0;
+  /* max-width: 360px; */
+  font-size: 16px;
+  line-height: 1.65;
+  color: #707070;
 }
 
 .choice__btn {
-      margin-top: 12px;
-    display: inline-flex
-;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 50px;
-    font-size: 16px;
-    font-weight: normal;
-    color: #02111A;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 9999px;
-    text-decoration: none;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    transition: background 0.2s 
-ease;
-    text-decoration: none;
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #02111A;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease;
+  text-decoration: none;
 }
 
 .choice__btn:hover {
@@ -1057,17 +1597,114 @@ ease;
 
 /* ==== FIX: remove outer curved marks around the split card ==== */
 @media (min-width: 780px) {
+
   /* card ke bahar nikla kuch bhi clip ho jaye */
-  .pe__card { 
+  .pe__card {
     /* overflow: hidden;  */
   }
 
   /* jo capsule outlines bana rahe the un pseudo-elements ko band karo */
   .pe__card .choice:first-child::before,
   .pe__card .choice:last-child::after {
-    content: none !important;  /* remove the pseudo elements */
+    content: none !important;
+    /* remove the pseudo elements */
   }
 }
+
+
+/* =========================
+   LARGE TABLETS (≤991.98px)
+   ========================= */
+@media (max-width: 991.98px) {
+  .pe__title { font-size: 30px; }
+  .pe__subtitle { font-size: 15px; }
+
+  /* card thoda compact & softer curves */
+  .pe__card {
+    margin-left: 6%;
+    margin-right: 6%;
+    border-radius: 80px;
+  }
+
+  /* inner blocks ka padding kam */
+  .choice {
+    padding: 48px 60px 64px;
+  }
+
+  .choice__btn { padding: 10px 34px; }
+}
+
+
+/* =========================
+   SMALL TABLETS (576–767.98px)
+   ========================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .pe__title { font-size: 28px; }
+  .pe__subtitle { font-size: 14.5px; }
+
+  .pe__card {
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 48px;
+  }
+
+  .pe__grid { row-gap: 18px; }
+
+  .choice {
+    padding: 34px 24px 28px;
+    gap: 8px;
+  }
+  /* button flow me (absolute nahi) */
+  .choice a { position: static; margin-top: 12px; }
+
+  .choice__title { font-size: 18px; }
+  .choice__text  { font-size: 14px; }
+
+  .choice__btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+
+/* =========================
+   PHONES (≤575.98px)
+   ========================= */
+@media (max-width: 575.98px) {
+  .pe__title { font-size: 26px; }
+  .pe__subtitle { font-size: 14px; }
+
+  .pe__card {
+    margin-left: 14px;
+    margin-right: 14px;
+    border-radius: 28px;
+  }
+
+  .pe__grid { row-gap: 16px; }
+
+  .choice {
+    padding: 24px 16px 18px;
+    gap: 8px;
+    text-align: center;
+  }
+  .choice a { position: static; margin-top: 10px; }
+
+  .choice__title { font-size: 17px; }
+  .choice__text  { font-size: 13.5px; }
+
+  .choice__btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+}
+
+/* (optional) super small phones */
+@media (max-width: 360px) {
+  .pe__title { font-size: 24px; }
+}
+
 
 
 /* End PopularEverywhere Styles */
@@ -1110,72 +1747,88 @@ ease;
   animation: dotFloat 8s ease-in-out infinite;
   will-change: transform;
 }
+
 .hiwc__circle.c1 {
-     left: 16px;
-    top: 168px;
-    width: 60px;
-    height: 60px;
-    animation-duration: 1s;
-    animation-delay: 1s;
+  left: 16px;
+  top: 168px;
+  width: 60px;
+  height: 60px;
+  animation-duration: 1s;
+  animation-delay: 1s;
 }
+
 .hiwc__circle.c2 {
-   left: 201px;
-    top: 74px;
-    width: 40px;
-    height: 40px;
-    opacity: .9;
-    animation-duration: 1s;
-    animation-delay: 1s;
+  left: 201px;
+  top: 74px;
+  width: 40px;
+  height: 40px;
+  opacity: .9;
+  animation-duration: 1s;
+  animation-delay: 1s;
 }
 
 .hiwc__circle.c3 {
-    left: 63px;
-    top: 383px;
-    width: 60px;
-    height: 60px;
-    opacity: .65;
-    animation-duration: 1s;
-    animation-delay: 1s;
+  left: 63px;
+  top: 383px;
+  width: 60px;
+  height: 60px;
+  opacity: .65;
+  animation-duration: 1s;
+  animation-delay: 1s;
 }
 
 /* Big hollow ring on the right */
 .hiwc__decor::after {
- content: "";
-    position: absolute;
-    right: -156px;
-    top: 77px;
-    width: 342px;
-    height: 339px;
-    background: radial-gradient(circle at center, transparent 58%, rgba(237, 233, 254, .9) 58%, rgba(237, 233, 254, .9) 74%, rgba(237, 233, 254, 0) 74%);
-    border-radius: 54%;
-    filter: saturate(105%);
-    animation: ringBreathe 1s 
-ease-in-out infinite;
-    will-change: transform, filter, opacity;
+  content: "";
+  position: absolute;
+  right: -156px;
+  top: 77px;
+  width: 342px;
+  height: 339px;
+  background: radial-gradient(circle at center, transparent 58%, rgba(237, 233, 254, .9) 58%, rgba(237, 233, 254, .9) 74%, rgba(237, 233, 254, 0) 74%);
+  border-radius: 54%;
+  filter: saturate(105%);
+  animation: ringBreathe 1s ease-in-out infinite;
+  will-change: transform, filter, opacity;
 }
 
 
 /* Big hollow ring on the right */
 .hiwc__decors::after {
- content: "";
-    position: absolute;
-    left: -167px;
-    top: 137px;
-    width: 342px;
-    height: 339px;
-    background: radial-gradient(circle at center, transparent 58%, rgba(237, 233, 254, .9) 58%, rgba(237, 233, 254, .9) 74%, rgba(237, 233, 254, 0) 74%);
-    border-radius: 54%;
-    filter: saturate(105%);
-    animation: ringBreathe 1s 
-ease-in-out infinite;
-    will-change: transform, filter, opacity;
+  content: "";
+  position: absolute;
+  left: -167px;
+  top: 137px;
+  width: 342px;
+  height: 339px;
+  background: radial-gradient(circle at center, transparent 58%, rgba(237, 233, 254, .9) 58%, rgba(237, 233, 254, .9) 74%, rgba(237, 233, 254, 0) 74%);
+  border-radius: 54%;
+  filter: saturate(105%);
+  animation: ringBreathe 1s ease-in-out infinite;
+  will-change: transform, filter, opacity;
 }
 
 /* ---------------- HEAD ---------------- */
-.hiwc__head { text-align: center; }
-.hiwc__title { margin: 0; font-size: 35px; font-weight: 700; color: var(--slate-900); }
-.hiwc__accent { color: var(--orange-500); }
-.hiwc__subtitle { margin-top: 6px; font-size: 16px; color: #595959; }
+.hiwc__head {
+  text-align: center;
+}
+
+.hiwc__title {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--slate-900);
+}
+
+.hiwc__accent {
+  color: var(--orange-500);
+}
+
+.hiwc__subtitle {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #595959;
+}
 
 /* ---------------- GRID ---------------- */
 .hiwc__grid {
@@ -1186,8 +1839,12 @@ ease-in-out infinite;
   z-index: 0;
   position: relative;
 }
+
 @media (min-width:900px) {
-  .hiwc__grid { grid-template-columns: repeat(5, 1fr); gap: 34px; }
+  .hiwc__grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 34px;
+  }
 }
 
 /* ---------------- STEP ---------------- */
@@ -1198,61 +1855,203 @@ ease-in-out infinite;
   justify-content: center;
   text-align: left;
 }
+
 .hiwc__icon {
   display: grid;
   place-items: center;
-  min-width: 38px; height: 38px;
+  min-width: 38px;
+  height: 38px;
   border-radius: 9999px;
   border: 1px solid var(--border);
   background: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
 }
-.hiwc__stepTitle { margin: 0; font-size: 15px; font-weight: 800; color: var(--slate-800); }
-.hiwc__stepText { margin: 4px 0 0; font-size: 12px; color: var(--slate-500); line-height: 1.6; max-width: 210px; }
+
+.hiwc__stepTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--slate-800);
+}
+
+.hiwc__stepText {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--slate-500);
+  line-height: 1.6;
+  max-width: 210px;
+}
 
 
-.hiwcstep{position: relative; display: inline-block; width: 20%; margin-right: 0%; padding: 10px;}
+.hiwcstep {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  margin-right: 0%;
+  padding: 10px;
+}
+
 /* .hiwc__step ul{list-style: none; padding: 0; margin: 0;} */
 /* .hiwc__step ul li{margin-bottom: 10px; font-size: 14px; color: #595959; line-height: 1.6; max-width: 210px; } */
-.hiwcstep .hiwc{position: relative; padding: 0px; }
-.hiwcstep .hiwc h4{font-size: 21px; color: #000; font-weight: 500;}
-.hiwcstep .hiwc h4 span{ background-color: #ffffff; border: #CEE0DC solid 1px; border-radius: 50%; width: 50px; height: 50px; text-align: center; line-height: 45px; display: inline-block;}
-.hiwcstep .hiwc h4 span img{width: 23px; height: auto;}
-.hiwcstep .hiwc p{font-size: 16px; color: #595959; }
+.hiwcstep .hiwc {
+  position: relative;
+  padding: 0px;
+}
+
+.hiwcstep .hiwc h4 {
+  font-size: 21px;
+  color: #000;
+  font-weight: 500;
+}
+
+.hiwcstep .hiwc h4 span {
+  background-color: #ffffff;
+  border: #CEE0DC solid 1px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 45px;
+  display: inline-block;
+}
+
+.hiwcstep .hiwc h4 span img {
+  width: 23px;
+  height: auto;
+}
+
+.hiwcstep .hiwc p {
+  font-size: 16px;
+  color: #595959;
+}
 
 
 
 
 /* ---------------- ANIMATIONS ---------------- */
 @keyframes dotFloat {
-  0%   { transform: translate3d(0, 0, 0) scale(1); }
-  50%  { transform: translate3d(0px, -10px, 0) scale(1.06); }
-  100% { transform: translate3d(0, 0, 0) scale(1); }
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0px, -10px, 0) scale(1.06);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 @keyframes ringBreathe {
-  0%   { transform: translate(0,0) scale(1);       filter: saturate(105%); opacity:.92; }
-  50%  { transform: translate(3px,-4px) scale(1.04); filter: saturate(115%); opacity:.98; }
-  100% { transform: translate(0,0) scale(1);       filter: saturate(105%); opacity:.92; }
+  0% {
+    transform: translate(0, 0) scale(1);
+    filter: saturate(105%);
+    opacity: .92;
+  }
+
+  50% {
+    transform: translate(3px, -4px) scale(1.04);
+    filter: saturate(115%);
+    opacity: .98;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+    filter: saturate(105%);
+    opacity: .92;
+  }
 }
 
 /* Respect user's reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
+
   .hiwc__circle,
   .hiwc__decor::after {
     animation: none !important;
   }
 }
 
+/* =========================
+   TABLETS (≤991.98px)
+   ========================= */
+@media (max-width: 991.98px) {
+  /* layout: 3 per row */
+  .hiwcstep { 
+    box-sizing: border-box;
+    display: inline-block;
+    width: 33.333%;
+    padding: 12px 10px;
+    vertical-align: top;
+  }
+
+  /* heading + copy thoda compact */
+  .hiwc__title { font-size: 32px; }
+  .hiwc__subtitle { font-size: 15px; }
+
+  /* icon + text sizing tweak */
+  .hiwcstep .hiwc h4 { font-size: 20px; }
+  .hiwcstep .hiwc p  { font-size: 15px; }
+
+  /* dots/halo ko chhota & thoda shift so they don't overlap */
+  .hiwc__circle.c1 { width: 48px; height: 48px; top: 150px; left: 14px; }
+  .hiwc__circle.c2 { width: 32px; height: 32px; top: 70px;  left: 160px; }
+  .hiwc__circle.c3 { width: 48px; height: 48px; top: 360px; left: 44px; }
+  .hiwc__decor::after { right: -120px; top: 80px; width: 280px; height: 280px; }
+}
+
+/* =========================
+   SMALL TABLETS (576–767.98px)
+   ========================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* layout: 2 per row */
+  .hiwcstep { width: 50%; padding: 12px 8px; }
+
+  .hiwc__title { font-size: 28px; }
+  .hiwc__subtitle { font-size: 14px; }
+
+  .hiwcstep .hiwc h4 { font-size: 19px; }
+  .hiwcstep .hiwc p  { font-size: 14.5px; }
+
+  /* decorations: even smaller */
+  .hiwc__circle.c1 { width: 40px; height: 40px; top: 140px; left: 12px; }
+  .hiwc__circle.c2 { width: 26px; height: 26px; top: 64px;  left: 130px; }
+  .hiwc__circle.c3 { width: 40px; height: 40px; top: 330px; left: 36px; }
+  .hiwc__decor::after { right: -100px; top: 90px; width: 240px; height: 240px; }
+}
+
+/* =========================
+   PHONES (≤575.98px)
+   ========================= */
+@media (max-width: 575.98px) {
+  /* layout: 1 per row */
+  .hiwcstep { width: 100%; padding: 10px 6px; }
+
+  /* center-ish spacing for small screens */
+  .hiwc { padding-top: 60px; padding-bottom: 60px; }
+  .hiwc__title { font-size: 26px; }
+  .hiwc__subtitle { font-size: 14px; }
+
+  .hiwcstep .hiwc h4 { font-size: 18px; }
+  .hiwcstep .hiwc p  { font-size: 14px; }
+
+  /* icon chip + image shrink */
+  .hiwcstep .hiwc h4 span { width: 44px; height: 44px; line-height: 40px; }
+  .hiwcstep .hiwc h4 span img { width: 20px; }
+
+  /* decorations: hide to avoid overflow/clipping on phones */
+  .hiwc__decor { display: none; }
+}
+
 /* End HowItWorks Styles */
 
 
 /* Download Styles */
-.lotus{
+.lotus {
   /* border: 5px solid red; */
   background-color: #F2EFFF;
-  padding-top:10px !important;
-  padding-bottom:10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 
   /* ✅ added for cross-section bleed */
   position: relative;
@@ -1262,10 +2061,14 @@ ease-in-out infinite;
 
 /* Container */
 .ds {
-  --bg: #F2EFFF;             /* light lavender */
-  --ink: #0f0f14;            /* near-black */
-  --muted: #676a7a;          /* body text */
-  --pill: #ffffff;           /* badge bg */
+  --bg: #F2EFFF;
+  /* light lavender */
+  --ink: #0f0f14;
+  /* near-black */
+  --muted: #676a7a;
+  /* body text */
+  --pill: #ffffff;
+  /* badge bg */
   --pill-border: #e8e8ef;
   --yellow: #ffe56c;
   --pink: #ff5ea8;
@@ -1273,10 +2076,12 @@ ease-in-out infinite;
 
   /* positioning */
   position: relative;
-  z-index: 30;               /* ↑ bumped from 10 so circles sit above neighbors */
+  z-index: 30;
+  /* ↑ bumped from 10 so circles sit above neighbors */
 
   /* NEW: control how much the circles bleed outside */
-  --bleedY: 120px;           /* increase/decrease to change overlap */
+  --bleedY: 120px;
+  /* increase/decrease to change overlap */
   border-radius: 12px;
 
   /* ✅ padding (as you kept commented, leaving it commented) */
@@ -1290,7 +2095,8 @@ ease-in-out infinite;
 /* Grid */
 .ds__grid {
   display: grid;
-  grid-template-columns: 1.15fr 1fr; /* more space for left image */
+  grid-template-columns: 1.15fr 1fr;
+  /* more space for left image */
   align-items: center;
   gap: clamp(16px, 3vw, 40px);
 
@@ -1308,16 +2114,19 @@ ease-in-out infinite;
 
 /* Left side */
 .ds__phone {
-  position: static;          /* was: relative — don't trap absolute child */
+  position: static;
+  /* was: relative — don't trap absolute child */
   min-height: 420px;
 }
 
 /* Circles: anchor to section left & center vertically; bleed outside */
 .ds__circles {
   position: absolute;
-  left: 0;                    /* stick to .ds left edge */
+  left: 0;
+  /* stick to .ds left edge */
   top: 50%;
-  transform: translate(-17%, -49%);  /* ~half outside to the left */
+  transform: translate(-17%, -49%);
+  /* ~half outside to the left */
 
   width: min(696px, 58vw);
   height: auto;
@@ -1332,13 +2141,14 @@ ease-in-out infinite;
   position: absolute;
   left: clamp(24px, 7vw, 120px);
   bottom: clamp(-29px, -2vw, -8px);
-  z-index: 3; /* above circles */
+  z-index: 3;
+  /* above circles */
 }
 
 .ds__phoneimg {
   display: block;
   /* width: min(360px, 42vw); */
-      width: auto;
+  width: auto;
   height: auto;
   filter: drop-shadow(0 18px 36px rgba(15, 15, 20, 0.25));
   /* border-radius: 22px; */
@@ -1352,7 +2162,8 @@ ease-in-out infinite;
 
 @media (max-width: 980px) {
   .ds__copy {
-    order: -1;         /* copy first on mobile */
+    order: -1;
+    /* copy first on mobile */
     text-align: center;
   }
 }
@@ -1386,11 +2197,32 @@ ease-in-out infinite;
   justify-content: flex-start;
 } */
 
-.ds__badges{position: relative; margin: 20px 0;}
-.ds__badges a{margin-right: 20px; padding: 0px 30px; text-decoration: none; font-weight: normal; color: #1A3D6B;}
-.ds__badges a span{border-right: 1px solid rgba(136, 136, 136, .2); padding-right: 15px;font-size: 20px;}
-.ds__badges a span.apple{color: #EDCC30;}
-.ds__badges a span.android{color: #FF3366;}
+.ds__badges {
+  position: relative;
+  margin: 20px 0;
+}
+
+.ds__badges a {
+  margin-right: 20px;
+  padding: 0px 30px;
+  text-decoration: none;
+  font-weight: normal;
+  color: #1A3D6B;
+}
+
+.ds__badges a span {
+  border-right: 1px solid rgba(136, 136, 136, .2);
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.ds__badges a span.apple {
+  color: #EDCC30;
+}
+
+.ds__badges a span.android {
+  color: #FF3366;
+}
 
 @media (max-width: 980px) {
   .ds__badges {
@@ -1427,8 +2259,13 @@ ease-in-out infinite;
   display: inline-block;
 }
 
-.dot--yellow { background: var(--yellow); }
-.dot--pink   { background: var(--pink); }
+.dot--yellow {
+  background: var(--yellow);
+}
+
+.dot--pink {
+  background: var(--pink);
+}
 
 /* Optional phone mock (fallback) */
 .mockphone {
@@ -1471,7 +2308,9 @@ ease-in-out infinite;
   margin-bottom: 10px;
 }
 
-.mockphone .r.wide { width: 70%; }
+.mockphone .r.wide {
+  width: 70%;
+}
 
 .mockphone .cta {
   margin-top: 16px;
@@ -1491,5 +2330,89 @@ ease-in-out infinite;
   border-radius: 999px;
 }
 
+/* =========================
+   LARGE TABLETS (≤991.98px)
+   ========================= */
+@media (max-width: 991.98px) {
+  /* 2nd column text already center ho raha (aapke 980px rule se) */
+  .ds__title   { font-size: 42px; line-height: 1.1; }
+  .ds__headline{ font-size: 32px; }
+  .ds__note    { font-size: 15px; }
+
+  /* phone area a bit shorter */
+  .ds__phone   { min-height: 380px; }
+
+  /* circles + phone thoda compact */
+  .ds__circles {
+    width: min(560px, 65vw);
+    transform: translate(-22%, -50%);
+  }
+  .ds__mock {
+    left: clamp(20px, 8vw, 90px);
+    bottom: clamp(-24px, -2.2vw, -6px);
+  }
+  .ds__phoneimg { width: min(360px, 44vw); height: auto; }
+  .mockphone    { width: min(300px, 46vw); }
+  
+  /* badges spacing */
+  .ds__badges { display: flex; justify-content: center; gap: 12px; }
+  .ds__badge  { height: 44px; padding: 0 16px; }
+  .ds__badges a { margin-right: 0; }
+}
+
+/* =========================
+   SMALL TABLETS (576–767.98px)
+   ========================= */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .ds__title    { font-size: 36px; }
+  .ds__headline { font-size: 26px; }
+  .ds__note     { font-size: 14.5px; }
+
+  .ds__phone    { min-height: 360px; }
+
+  .ds__circles  {
+    width: min(520px, 78vw);
+    transform: translate(-28%, -50%);
+  }
+  .ds__mock     { left: clamp(18px, 10vw, 80px); bottom: -12px; }
+  .ds__phoneimg { width: min(330px, 56vw); }
+
+  .ds__badges   { gap: 10px; }
+  .ds__badge    { height: 42px; padding: 0 14px; }
+  .ds__badges a span { font-size: 18px; padding-right: 10px; }
+}
+
+/* =========================
+   PHONES (≤575.98px)
+   ========================= */
+@media (max-width: 575.98px) {
+  /* stack naturally (already 1 column via your 980px rule) */
+  .ds__title    { font-size: 30px; }
+  .ds__headline { font-size: 22px; }
+  .ds__note     { font-size: 14px; }
+
+  /* phone block centre with safe size */
+  .ds__phone       { min-height: 360px; }
+  .ds__circles     {
+    width: 110vw;                 /* large soft backdrop */
+    transform: translate(-15%, -18%);
+    opacity: .95;
+  }
+  .ds__mock        { left: 50%; transform: translateX(-50%); bottom: -6px; }
+  .ds__phoneimg    { width: min(300px, 78vw); height: auto; }
+  .mockphone       { width: min(260px, 74vw); }
+
+  /* badges = two lines if needed */
+  .ds__badges      { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
+  .ds__badge       { height: 40px; padding: 0 14px; font-size: 14px; }
+  .ds__badges a span { font-size: 16px; padding-right: 8px; }
+}
+
+/* (optional) very small phones */
+@media (max-width: 380px) {
+  .ds__title    { font-size: 28px; }
+  .ds__headline { font-size: 20px; }
+  .ds__phoneimg { width: min(240px, 82vw); }
+}
 
 /* End Download Styles */

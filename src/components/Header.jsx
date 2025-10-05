@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Components.css";
 import mainLogo from "../images/main-logo.png";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import stickyLogo from "../images/main-dark-logo.png"; // NEW: sticky state logo
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const SLIDES = [
   {
@@ -32,6 +32,24 @@ export default function Header() {
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
 
+  // === Sticky after scroll ===
+  const [stuck, setStuck] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setStuck(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // measure nav height for spacer (prevents jump when fixed)
+  const navRef = useRef(null);
+  const [navH, setNavH] = useState(0);
+  useEffect(() => {
+    const update = () => setNavH(navRef.current ? navRef.current.offsetHeight : 0);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
   // Auto-advance every 5s (pause on hover)
   useEffect(() => {
@@ -55,7 +73,6 @@ export default function Header() {
       down = true;
       startX = e.touches ? e.touches[0].clientX : e.clientX;
     };
-
     const onUp = (e) => {
       if (!down) return;
       down = false;
@@ -84,65 +101,64 @@ export default function Header() {
 
   return (
     <section className="hr-hero">
-
-       {/* NAVBAR */}
-
-<nav className="navbar navbar-expand-lg">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#"><img src={mainLogo} alt="HiringReferrals" /></a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0 hr-links">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Browse Jobs</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Employers</a>
-        </li>
-          <li className="nav-item">
-          <a className="nav-link" href="#">Candidates</a>
-        </li>
-          <li className="nav-item">
-          <a className="nav-link" href="#">Career Advice</a>
-        </li>
-          <li className="nav-item">
-          <a className="nav-link" href="#">Services</a>
-        </li>
-        {/* <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+      {/* NAVBAR */}
+      <nav
+        ref={navRef}
+        className={`navbar navbar-expand-lg ${stuck ? "is-sticky" : ""}`}
+      >
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            {/* Sticky par dark logo, otherwise main (light) logo */}
+            <img
+              src={stuck ? stickyLogo : mainLogo}
+              alt="HiringReferrals"
+              className="hr-logo"
+            />
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-             <li><hr class="dropdown-divider"></li> 
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li> */}
-        {/* <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li> */}
-      </ul>
-      <form className="d-flex" role="search">
-        <ul>
-          <li className="hr-btn hr-btn--ghost"><a href="#">Login</a> / <a href="#">Register</a></li>
-          <li><a className="hr-btn hr-btn--light" href="#">
-              Job Post
-            </a></li>
-        </ul>
-        {/* <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button> */}
-      </form>
-    </div>
-  </div>
-</nav>
-{/* NAVBAR END */}
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 hr-links">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">
+                  Browse Jobs
+                </a>
+              </li>
+              <li className="nav-item"><a className="nav-link" href="#">Employers</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Candidates</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Career Advice</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Services</a></li>
+            </ul>
+            <form className="d-flex" role="search">
+              <ul>
+                <li className="hr-btn hr-btn--ghost">
+                  <a href="#">Login</a> / <a href="#">Register</a>
+                </li>
+                <li>
+                  <a className="hr-btn hr-btn--light" href="#">
+                    Job Post
+                  </a>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </nav>
+      {/* Spacer to prevent jump when nav becomes fixed */}
+      {stuck ? <div style={{ height: navH }} /> : null}
+      {/* NAVBAR END */}
 
       <div className="hr-hero__frame">
-       
-
         {/* SLIDER CONTENT */}
         <div
           className="hr-hero__content"
@@ -150,12 +166,8 @@ export default function Header() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <h1 key={`t-${idx}`} className="hr-title hr-anim">
-            {slide.title}
-          </h1>
-          <p key={`s-${idx}`} className="hr-sub hr-anim">
-            {slide.sub}
-          </p>
+          <h1 key={`t-${idx}`} className="hr-title hr-anim">{slide.title}</h1>
+          <p key={`s-${idx}`} className="hr-sub hr-anim">{slide.sub}</p>
 
           <button
             key={`c-${idx}`}
