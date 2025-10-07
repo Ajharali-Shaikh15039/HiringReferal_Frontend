@@ -1,147 +1,90 @@
-
-import React, { useState } from "react";
+// src/pages/Login.jsx
+import React from "react";
 import "../components/Components.css";
-import InnerHeader from "../components/InnerHeader"; // <- yahi import path hoga (pages -> components)
-import { useNavigate, NavLink } from "react-router-dom";
+import InnerHeader from "../components/InnerHeader";
 
-export default function Login() {
-  const navigate = useNavigate();
+import hero from "../images/hero-illustration.png";   // image 27.png
+import circuit from "../images/circuit-bg.png";       // bg_footer_2.jpg 1.png
 
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-    remember: false,
-  });
-  const [showPwd, setShowPwd] = useState(false);
-  const [errors, setErrors] = useState({});
+const Login = () => {
+  return (
+    <div className="login-page">
+      {/* Optional: header agar dikhana ho */}
+      {/* <InnerHeader /> */}
 
-  const onChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setForm((f) => ({ ...f, [name]: type === "checkbox" ? checked : value }));
-  };
+      {/* Left artwork */}
+      <div className="login-page__left">
+        <img src={circuit} alt="" aria-hidden className="login-page__circuit" />
+        <img src={hero} alt="Profile UI illustration" className="login-page__hero" />
+      </div>
 
-  const validate = () => {
-    const e = {};
-    if (!form.email.trim()) e.email = "Email is required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      e.email = "Enter a valid email";
-    if (!form.password) e.password = "Password is required";
-    else if (form.password.length < 6) e.password = "Min 6 characters";
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  };
+      {/* Right card */}
+      <div className="login-page__right">
+        <div className="login-page__card">
+          <h1 className="login-page__title">Sign In</h1>
+          <p className="login-page__sub">to your account</p>
 
-  const onSubmit = async (ev) => {
-    ev.preventDefault();
-    if (!validate()) return;
+          <div className="login-page__segmented">
+            <label className="login-page__segmented-item">
+              <input type="radio" name="role" defaultChecked />
+              <span>Candidates</span>
+            </label>
+            <label className="login-page__segmented-item">
+              <input type="radio" name="role" />
+              <span>Freelancer</span>
+            </label>
+          </div>
 
-    try {
-      // TODO: yahan API call karna ho to karo (fetch/axios)
-      // const res = await axios.post("/api/login", form);
+          <label className="login-page__field">
+            <span className="login-page__field-label">Email address or user name</span>
+            <input className="login-page__input login-page__input--pill" type="email" />
+          </label>
 
-      console.log("Login ->", form); // demo
-      navigate("/", { replace: true }); // success pe home bhej diya
-    } catch (err) {
-      setErrors({ general: "Login failed. Please try again." });
-    }
-  };
+          <label className="login-page__field">
+            <span className="login-page__field-label">Password</span>
+            <div className="login-page__input login-page__input--pill login-page__input--with-icon">
+              <input type="password" />
+              <button type="button" className="login-page__icon-btn" aria-label="Hide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 3l18 18" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M10.58 10.58A3 3 0 0012 15a3 3 0 002.42-4.42M12 5C7 5 3.5 8.5 2 12c.6 1.52 1.57 2.87 2.78 3.95M22 12c-.6-1.52-1.57-2.87-2.78-3.95M7.11 16.89C8.8 18 10.68 18.5 12 18.5c5 0 8.5-3.5 10-6.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
+                <span className="login-page__icon-text">Hide</span>
+              </button>
+            </div>
+          </label>
 
-  // return (
-  //   // <div className="container login-page py-5">
-  //   //   <div className="row justify-content-center">
-  //   //     <div className="col-lg-5 col-md-7">
-  //   //       <div className="card shadow-sm border-0">
-  //   //         <div className="card-body p-4 p-md-5">
-  //   //           <h1 className="h4 mb-1">Welcome back</h1>
-  //   //           <p className="text-muted mb-4">Log in to continue</p>
+          <div className="login-page__row">
+            <label className="login-page__check">
+              <input type="checkbox" defaultChecked />
+              <span>Remember me</span>
+            </label>
+          </div>
 
-  //   //           {errors.general && (
-  //   //             <div className="alert alert-danger">{errors.general}</div>
-  //   //           )}
+          <p className="login-page__legal">
+            By continuing, you agree to the <a href="#">Terms of use</a> and{" "}
+            <a href="#">Privacy Policy.</a>
+          </p>
 
-  //   //           <form onSubmit={onSubmit} noValidate>
-  //   //             <div className="mb-3">
-  //   //               <label className="form-label">Email</label>
-  //   //               <input
-  //   //                 type="email"
-  //   //                 className={`form-control ${errors.email ? "is-invalid" : ""}`}
-  //   //                 placeholder="you@example.com"
-  //   //                 name="email"
-  //   //                 value={form.email}
-  //   //                 onChange={onChange}
-  //   //               />
-  //   //               {errors.email && (
-  //   //                 <div className="invalid-feedback">{errors.email}</div>
-  //   //               )}
-  //   //             </div>
+          <button className="login-page__btn-primary">Log in</button>
 
-  //   //             <div className="mb-3">
-  //   //               <label className="form-label">Password</label>
-  //   //               <div className="input-group">
-  //   //                 <input
-  //   //                   type={showPwd ? "text" : "password"}
-  //   //                   className={`form-control ${errors.password ? "is-invalid" : ""}`}
-  //   //                   placeholder="Your password"
-  //   //                   name="password"
-  //   //                   value={form.password}
-  //   //                   onChange={onChange}
-  //   //                 />
-  //   //                 <button
-  //   //                   type="button"
-  //   //                   className="btn btn-outline-secondary"
-  //   //                   onClick={() => setShowPwd((s) => !s)}
-  //   //                   aria-label={showPwd ? "Hide password" : "Show password"}
-  //   //                 >
-  //   //                   {showPwd ? "Hide" : "Show"}
-  //   //                 </button>
-  //   //               </div>
-  //   //               {errors.password && (
-  //   //                 <div className="invalid-feedback d-block">
-  //   //                   {errors.password}
-  //   //                 </div>
-  //   //               )}
-  //   //             </div>
+          <button className="login-page__link">Forget your password</button>
 
-  //   //             <div className="d-flex justify-content-between align-items-center mb-3">
-  //   //               <div className="form-check">
-  //   //                 <input
-  //   //                   className="form-check-input"
-  //   //                   type="checkbox"
-  //   //                   id="remember"
-  //   //                   name="remember"
-  //   //                   checked={form.remember}
-  //   //                   onChange={onChange}
-  //   //                 />
-  //   //                 <label className="form-check-label" htmlFor="remember">
-  //   //                   Remember me
-  //   //                 </label>
-  //   //               </div>
-  //   //               <NavLink to="/forgot-password" className="small">
-  //   //                 Forgot password?
-  //   //               </NavLink>
-  //   //             </div>
+          <p className="login-page__signup">
+            Don’t have an account? <a href="#">Sign up</a>
+          </p>
 
-  //   //             <button type="submit" className="btn btn-primary w-100">
-  //   //               Log in
-  //   //             </button>
-  //   //           </form>
+          <div className="login-page__divider"><span>Or continue with</span></div>
 
-  //   //           <div className="text-center mt-4">
-  //   //             <span className="text-muted">No account?</span>{" "}
-  //   //             <NavLink to="/register">Sign up</NavLink>
-  //   //           </div>
-  //   //         </div>
-  //   //       </div>
+          <div className="login-page__socials">
+            <button className="login-page__social"><span>G</span></button>
+            <button className="login-page__social"><span></span></button>
+            <button className="login-page__social"><span>in</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  //   //       <div className="text-center text-muted mt-3">
-  //   //         <small>
-  //   //           By continuing you agree to our{" "}
-  //   //           <NavLink to="/terms">Terms</NavLink> and{" "}
-  //   //           <NavLink to="/privacy">Privacy Policy</NavLink>.
-  //   //         </small>
-  //   //       </div>
-  //   //     </div>
-  //   //   </div>
-  //   // </div>
-  // );
-}
+export default Login;
