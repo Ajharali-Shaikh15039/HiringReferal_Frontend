@@ -514,6 +514,7 @@ nav.navbar.is-sticky .navbar-toggler-icon {
   /* Navbar spacing & logo */
   nav ul.navbar-nav {
     margin-left: 0 !important;
+    margin-top: 22px !important;
   }
 
   .navbar .navbar-brand .hr-logo {
@@ -625,11 +626,6 @@ nav.navbar.is-sticky .navbar-toggler-icon {
 
 
 
-/* Footer Styles */
-
-
-
-/* End Footer Styles */
 
 
 /* TopCompanies Styles */
@@ -2416,3 +2412,136 @@ nav.navbar.is-sticky .navbar-toggler-icon {
 }
 
 /* End Download Styles */
+
+/* ------------------------------
+   Login page (scoped by .login-page)
+--------------------------------- */
+
+.login-page {
+  /* optional subtle bg */
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(88,104,255,0.08), transparent 60%),
+    radial-gradient(1200px 600px at 110% 10%, rgba(251,188,5,0.07), transparent 60%);
+  min-height: calc(100dvh - 120px); /* header+footer space approx */
+}
+
+/* Card look & feel */
+.login-page .login-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.login-page .login-card .card-body {
+  /* tighter rhythm on small screens */
+  padding: clamp(20px, 4vw, 36px);
+}
+
+/* Headings / text */
+.login-page h1.h4 {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.login-page .text-muted {
+  color: #6c757d !important;
+}
+
+/* Labels */
+.login-page .form-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.login-page .form-control {
+  height: 44px;
+  border-radius: 10px;
+  border-color: #dfe3e8;
+  transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.login-page .form-control::placeholder {
+  color: #9aa4af;
+}
+
+.login-page .form-control:focus {
+  border-color: #5868ff;
+  box-shadow: 0 0 0 .2rem rgba(88,104,255,.15);
+}
+
+/* Input group (password + show/hide) */
+.login-page .input-group > .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.login-page .input-group .btn {
+  height: 44px;
+}
+
+.login-page .input-group .btn-outline-secondary {
+  border-color: #dfe3e8;
+  color: #2f2f44;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.login-page .input-group .btn-outline-secondary:hover {
+  background: #f6f7fb;
+  border-color: #cfd6de;
+}
+
+/* Validation */
+.login-page .is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.login-page .invalid-feedback {
+  font-size: 0.875rem;
+}
+
+/* Checkbox spacing */
+.login-page .form-check-input {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+/* Links */
+.login-page a.small {
+  text-decoration: none;
+}
+
+.login-page a.small:hover {
+  text-decoration: underline;
+}
+
+/* Primary button */
+.login-page .btn-primary {
+  height: 44px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 0;
+  background: linear-gradient(90deg, #544CF9 0%, #6F68FF 100%);
+  box-shadow: 0 10px 26px rgba(78, 97, 255, .25);
+}
+
+.login-page .btn-primary:hover {
+  filter: brightness(0.97);
+}
+
+/* Card + footer subtle spacing */
+.login-page .card + .text-center.text-muted {
+  margin-top: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 575.98px) {
+  .login-page {
+    min-height: calc(100dvh - 100px);
+  }
+  .login-page .col-lg-5.col-md-7 {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

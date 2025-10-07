@@ -142,7 +142,7 @@ export default function Header() {
             <form className="d-flex" role="search">
               <ul>
                 <li className="hr-btn hr-btn--ghost">
-                  <a href="#">Login</a> / <a href="#">Register</a>
+                  <a href="/login">Login</a> / <a href="#">Register</a>
                 </li>
                 <li>
                   <a className="hr-btn hr-btn--light" href="#">
