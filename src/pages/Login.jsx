@@ -2,6 +2,7 @@
 import React from "react";
 import "../components/Components.css";
 import InnerHeader from "../components/InnerHeader";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import hero from "../images/hero-illustration.png";   // image 27.png
 // import circuit from "../images/circuit-bg.png";       // bg_footer_2.jpg 1.png
@@ -80,9 +81,9 @@ const Login = () => {
           <div className="login-page__divider"><span>Or continue with</span></div>
 
           <div className="login-page__socials">
-            <button className="login-page__social"><span>G</span></button>
-            <button className="login-page__social"><span></span></button>
-            <button className="login-page__social"><span>in</span></button>
+            <button className="login-page__social"><span><i class="bi bi-google"></i></span></button>
+            <button className="login-page__social"><span><i class="bi bi-apple"></i></span></button>
+            <button className="login-page__social"><span><i class="bi bi-linkedin"></i></span></button>
           </div>
         </div>
       </div>

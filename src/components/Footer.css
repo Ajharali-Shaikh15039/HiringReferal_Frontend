@@ -220,10 +220,11 @@
   text-decoration: none;
   color: #fff;
   transition: background .15s ease;
+  transition: all 0.3s ease; 
 }
 
 .ft__soc:hover {
-  background: rgba(255, 255, 255, .22);
+  background: rgba(255, 255, 255, .22);  transform: translateY(-5px);
 }
 
 /* ===== responsive ===== */
