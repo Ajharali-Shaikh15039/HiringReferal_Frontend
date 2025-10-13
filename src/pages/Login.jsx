@@ -4,18 +4,21 @@ import "../components/Components.css";
 import InnerHeader from "../components/InnerHeader";
 
 import hero from "../images/hero-illustration.png";   // image 27.png
-import circuit from "../images/circuit-bg.png";       // bg_footer_2.jpg 1.png
+// import circuit from "../images/circuit-bg.png";       // bg_footer_2.jpg 1.png
 
 const Login = () => {
   return (
+    <div className="container">
+      <div className="row">
     <div className="login-page">
       {/* Optional: header agar dikhana ho */}
       {/* <InnerHeader /> */}
 
       {/* Left artwork */}
       <div className="login-page__left">
-        <img src={circuit} alt="" aria-hidden className="login-page__circuit" />
-        <img src={hero} alt="Profile UI illustration" className="login-page__hero" />
+         <img src={hero} alt="Profile UI illustration" className="login-page__hero" />
+        {/* <img src={circuit} alt="" aria-hidden className="login-page__circuit" /> */}
+       
       </div>
 
       {/* Right card */}
@@ -83,6 +86,8 @@ const Login = () => {
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };
